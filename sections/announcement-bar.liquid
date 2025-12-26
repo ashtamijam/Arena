@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ASHTAMI VERRA – Trusted Home Essentials for Every Indian Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ASHTAMI VERRA offers premium home essentials with Cash on Delivery, Free Shipping across India, and a risk-free Buy 1 Get 1 Free Wooden Magnetic Door Bell offer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#16a34a',
+            primaryDark: '#15803d',
+            accent: '#f97316',
+            dark: '#020617'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Poppins', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #e0f2fe 0, #f5f3ff 25%, #fefce8 60%, #ffffff 100%);
+      color: #020617;
+    }
+    .gradient-hero {
+      background: radial-gradient(circle at top left, #1d4ed8 0, #7c3aed 25%, #0f766e 60%, #0f172a 100%);
+    }
+    .card {
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.96);
+    }
+    .shadow-soft {
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+    }
+    .badge-pulse {
+      position: relative;
+    }
+    .badge-pulse::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 9999px;
+      border: 1px solid rgba(16, 185, 129, 0.5);
+      animation: pulse 1.8s infinite;
+    }
+    @keyframes pulse {
+      0% {transform: scale(1); opacity: 0.9;}
+      70% {transform: scale(1.15); opacity: 0;}
+      100% {transform: scale(1.15); opacity: 0;}
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #16a34a, #22c55e);
+      color: #f9fafb;
+      transition: background 0.18s ease, transform 0.15s ease, box-shadow 0.18s ease;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #15803d, #16a34a);
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(16, 185, 129, 0.35);
+    }
+    .btn-secondary {
+      background: rgba(15, 23, 42, 0.92);
+      color: #e5e7eb;
+      transition: background 0.18s ease, transform 0.15s ease, box-shadow 0.18s ease;
+    }
+    .btn-secondary:hover {
+      background: rgba(15, 23, 42, 1);
+      transform: translateY(-1px);
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.6);
+    }
+    .sticky-cta {
+      box-shadow: 0 -10px 30px rgba(15, 23, 42, 0.16);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.25s ease, opacity 0.2s ease;
+      opacity: 0;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 260px;
+      opacity: 1;
+    }
+    .faq-chevron {
+      transition: transform 0.2s ease;
+    }
+    .faq-item.active .faq-chevron {
+      transform: rotate(180deg);
+    }
+    .input-field {
+      width: 100%;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.75rem;
+      padding: 0.6rem 0.9rem;
+      font-size: 0.875rem;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+      transition: box-shadow 0.18s ease, border-color 0.18s ease, transform 0.15s ease, background-color 0.18s ease;
+      background-color: #ffffff;
+    }
+    .input-field:focus {
+      outline: none;
+      border-color: #22c55e;
+      box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.4), 0 6px 20px rgba(16, 185, 129, 0.18);
+      transform: translateY(-1px);
+      background-color: #f9fffb;
+    }
+    .variant-pill {
+      border-radius: 9999px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #e2e8f0;
+      padding: 0.35rem 0.8rem;
+      font-size: 0.8125rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.18s ease;
+      background-color: #ffffff;
+      color: #0f172a;
+    }
+    .variant-pill:hover {
+      border-color: #22c55e;
+      background-color: #f0fdf4;
+    }
+    .variant-pill.selected {
+      background: #dcfce7;
+      border-color: #16a34a;
+      color: #166534;
+      box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.4);
+    }
+    .trust-bar-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ecfdf5;
+      color: #16a34a;
+      flex-shrink: 0;
+    }
+    .section-padding {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+    @media (min-width: 1024px) {
+      .section-padding {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+    }
+    ::placeholder {
+      color: #9ca3af;
+    }
+    .star {
+      color: #fbbf24;
+    }
+    .whatsapp-btn {
+      background: #22c55e;
+      transition: background 0.18s ease, transform 0.15s ease, box-shadow 0.18s ease;
+    }
+    .whatsapp-btn:hover {
+      background: #16a34a;
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(16, 185, 129, 0.5);
+    }
+    .nav-blur {
+      backdrop-filter: blur(16px);
+      background: rgba(15, 23, 42, 0.92);
+    }
+    .hero-overlay {
+      background: radial-gradient(circle at top left, rgba(248, 250, 252, 0.18), transparent 55%);
+    }
+    .cod-label {
+      border-radius: 9999px;
+      background: #ecfdf5;
+      color: #166534;
+      font-size: 0.75rem;
+      padding: 0.15rem 0.6rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+  </style>
+</head>
+<body class="min-h-screen text-slate-900">
+  <div class="relative overflow-hidden">
+    <!-- Header -->
+    <header class="fixed top-0 inset-x-0 z-40 nav-blur border-b border-slate-800/40">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+        <a href="#hero" class="flex items-center gap-2 text-slate-100">
+          <div class="h-9 w-9 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-700 flex items-center justify-center text-slate-900 font-semibold text-lg shadow-lg shadow-emerald-500/40">
+            AV
+          </div>
+          <div>
+            <div class="font-display text-base font-semibold tracking-wide leading-tight">ASHTAMI VERRA</div>
+            <div class="text-[11px] text-emerald-300 uppercase tracking-[0.15em] leading-tight">Trusted Indian Brand</div>
+          </div>
+        </a>
+        <nav class="hidden lg:flex items-center gap-6 text-sm text-slate-100">
+          <a href="#featured-product" data-scroll-to="featured-product" class="hover:text-emerald-300 transition-colors">Products</a>
+          <a href="#why-us" data-scroll-to="why-us" class="hover:text-emerald-300 transition-colors">Why Us</a>
+          <a href="#how-it-works" data-scroll-to="how-it-works" class="hover:text-emerald-300 transition-colors">How It Works</a>
+          <a href="#reviews" data-scroll-to="reviews" class="hover:text-emerald-300 transition-colors">Reviews</a>
+          <a href="#faq" data-scroll-to="faq" class="hover:text-emerald-300 transition-colors">FAQ</a>
+        </nav>
+        <div class="hidden lg:flex items-center gap-4">
+          <div class="flex items-center gap-1 text-xs font-medium text-emerald-300 bg-emerald-900/40 px-3 py-1.5 rounded-full border border-emerald-500/40">
+            <span class="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Cash on Delivery Available</span>
+          </div>
+          <button type="button" data-scroll-order class="btn-primary text-xs font-semibold tracking-wide uppercase px-4 py-2 rounded-full flex items-center gap-1.5 shadow-lg shadow-emerald-500/40">
+            <span>Order Now</span>
+            <span class="text-lg leading-none">→</span>
+          </button>
+        </div>
+        <button id="nav-toggle" class="lg:hidden inline-flex items-center justify-center h-9 w-9 rounded-full border border-slate-700 text-slate-100 bg-slate-900/60">
+          <span class="sr-only">Toggle navigation</span>
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="lg:hidden hidden border-t border-slate-800/70 bg-slate-950/95">
+        <div class="px-4 pt-3 pb-4 space-y-3 text-sm text-slate-100">
+          <a href="#featured-product" data-scroll-to="featured-product" class="block py-1">Products</a>
+          <a href="#why-us" data-scroll-to="why-us" class="block py-1">Why Us</a>
+          <a href="#how-it-works" data-scroll-to="how-it-works" class="block py-1">How It Works</a>
+          <a href="#reviews" data-scroll-to="reviews" class="block py-1">Customer Reviews</a>
+          <a href="#faq" data-scroll-to="faq" class="block py-1">FAQ</a>
+          <div class="pt-2 border-t border-slate-800 mt-1">
+            <p class="text-xs text-emerald-200 mb-2 flex items-center gap-1.5">
+              <span class="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>COD available across India</span>
+            </p>
+            <div class="flex gap-2">
+              <button data-scroll-order class="btn-primary flex-1 text-xs font-semibold rounded-full px-3 py-2 flex items-center justify-center gap-1.5">
+                <span>Order Now – COD</span>
+                <span class="text-sm leading-none">→</span>
+              </button>
+              <button data-whatsapp class="whatsapp-btn flex items-center justify-center rounded-full h-9 w-9 text-white">
+                <svg viewBox="0 0 32 32" class="h-4 w-4" aria-hidden="true">
+                  <path fill="currentColor" d="M16.04 5.333c-5.2 0-9.414 4.187-9.414 9.36 0 1.65.44 3.257 1.28 4.68L6 27l7.853-1.882a9.58 9.58 0 0 0 2.187.256h.007c5.2 0 9.413-4.187 9.413-9.36 0-2.504-.98-4.86-2.76-6.627a9.39 9.39 0 0 0-6.66-2.72Zm0 1.867c2.005 0 3.885.78 5.3 2.193a7.43 7.43 0 0 1 2.2 5.3c0 4.127-3.387 7.48-7.54 7.48h-.006a7.64 7.64 0 0 1-1.94-.24l-.44-.12-4.653 1.12 1.24-4.493-.287-.46a7.42 7.42 0 0 1-1.153-3.987c0-4.127 3.387-7.48 7.54-7.48Zm-3.013 3.293c-.146-.32-.3-.327-.44-.333-.114-.006-.253-.006-.392-.006-.14 0-.36.053-.547.26-.187.206-.72.7-.72 1.707s.737 1.98.84 2.118c.107.133 1.433 2.26 3.54 3.078 1.75.68 2.1.547 2.48.507.38-.04 1.22-.493 1.393-.973.173-.48.173-.893.12-.98-.053-.093-.193-.146-.406-.253-.214-.106-1.26-.626-1.454-.7-.194-.066-.334-.1-.474.106-.14.2-.547.7-.673.846-.127.14-.247.153-.46.047-.213-.106-.9-.333-1.716-1.06-.634-.56-1.06-1.247-1.187-1.454-.127-.206-.013-.313.094-.419.094-.093.214-.24.32-.36.107-.12.14-.2.214-.333.073-.133.04-.253-.02-.36-.054-.1-.48-1.206-.68-1.654Z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="pt-20 pb-24 lg:pb-32">
+      <!-- Hero Section -->
+      <section id="hero" class="gradient-hero text-white pt-10 sm:pt-14 pb-10 sm:pb-12 lg:pb-16 relative overflow-hidden">
+        <div class="hero-overlay absolute inset-0 opacity-80 pointer-events-none"></div>
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+            <div>
+              <div class="inline-flex items-center gap-2 rounded-full bg-black/30 border border-emerald-400/40 px-3 py-1 mb-4 text-[11px] sm:text-xs font-medium">
+                <span class="cod-label bg-emerald-100 text-emerald-800">
+                  <span class="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  COD Across India
+                </span>
+                <span class="text-emerald-100">Pay only after delivery at your doorstep</span>
+              </div>
+              <h1 class="font-display text-3xl sm:text-4xl lg:text-[2.9rem] leading-tight font-semibold">
+                Trusted Home Essentials for Every Indian Home
+              </h1>
+              <p class="mt-4 text-sm sm:text-base text-sky-100 max-w-xl">
+                Premium, long-lasting products for your home. No prepaid risk – order with 100% safe Cash on Delivery and enjoy free pan-India shipping.
+              </p>
+              <p class="mt-3 text-xs sm:text-sm text-emerald-100 flex flex-wrap items-center gap-2">
+                <span class="inline-flex items-center text-yellow-300 text-base leading-none">
+                  <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                </span>
+                <span>4.8/5 rating from 10,000+ happy Indian customers</span>
+              </p>
+              <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                <button data-scroll-order class="btn-primary w-full sm:w-auto text-sm sm:text-base font-semibold rounded-full px-6 py-3 flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/40">
+                  <span>Shop Now – Pay After Delivery</span>
+                  <span class="text-lg leading-none">➜</span>
+                </button>
+                <button data-scroll-to="featured-product" class="btn-secondary w-full sm:w-auto text-sm sm:text-base font-semibold rounded-full px-5 py-3 flex items-center justify-center gap-2 border border-white/15">
+                  <span>Buy 1 Get 1 Free – Limited Stock</span>
+                </button>
+              </div>
+              <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] sm:text-xs text-sky-100">
+                <div class="flex items-center gap-1.5">
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                  <span>100% Secure COD • No hidden charges</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                  <span>Free shipping on every order</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="card shadow-soft rounded-2xl p-4 sm:p-5 lg:p-6">
+                <div class="flex items-center justify-between mb-3">
+                  <div class="inline-flex items-center gap-2 badge-pulse bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold">
+                    <span class="uppercase tracking-[0.18em] text-[9px] sm:text-[10px] text-emerald-700">Today Only</span>
+                    <span>Buy 1 Get 1 Free</span>
+                  </div>
+                  <div class="text-[11px] text-slate-500 text-right">
+                    <div class="font-semibold text-slate-900">Wooden Magnetic Door Bell</div>
+                    <div>Made for Indian doors</div>
+                  </div>
+                </div>
+                <div class="relative overflow-hidden rounded-xl mb-4">
+                  <img src="https://images.pexels.com/photos/735319/pexels-photo-735319.jpeg?auto=compress&cs=tinysrgb&w=800" alt="ASHTAMI VERRA Wooden Magnetic Door Bell" class="w-full h-52 sm:h-60 object-cover">
+                  <div class="absolute top-3 left-3 bg-black/70 text-emerald-200 text-[11px] font-medium px-2.5 py-1 rounded-full flex items-center gap-1.5">
+                    <span class="star text-yellow-400">★</span>
+                    <span>4.8 • 2,345 reviews</span>
+                  </div>
+                  <div class="absolute bottom-3 left-3 bg-white/90 text-xs px-2.5 py-1 rounded-full flex items-center gap-1.5">
+                    <span class="inline-flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span class="font-medium text-emerald-700">COD Offer Live Now</span>
+                  </div>
+                </div>
+                <div class="space-y-3 text-sm">
+                  <div class="flex items-center justify-between gap-3">
+                    <div>
+                      <div class="text-[10px] uppercase tracking-[0.2em] text-slate-400">ASHTAMI VERRA SPECIAL</div>
+                      <div class="font-semibold text-lg text-slate-900">Wooden Magnetic Door Bell (Set of 2)</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-[11px] text-slate-400 line-through">MRP ₹1,999</div>
+                      <div class="text-base font-semibold text-emerald-600">Today: ₹999</div>
+                      <div class="text-[10px] text-slate-500">for 2 pcs • incl. shipping</div>
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap items-center gap-2 text-[11px]">
+                    <span class="cod-label flex items-center gap-1">
+                      <span class="font-semibold">COD</span>
+                      <span>Pay on Delivery</span>
+                    </span>
+                    <span class="rounded-full bg-orange-100 text-orange-700 px-2 py-0.5 font-medium">Free Shipping</span>
+                    <span class="rounded-full bg-sky-100 text-sky-700 px-2 py-0.5 font-medium">Easy Replacement</span>
+                  </div>
+                  <ul class="mt-2 space-y-1.5 text-xs text-slate-600">
+                    <li class="flex gap-2">
+                      <span class="text-emerald-500 mt-0.5">✓</span>
+                      <span>Strong magnetic hold – fits most Indian wooden & metal doors.</span>
+                    </li>
+                    <li class="flex gap-2">
+                      <span class="text-emerald-500 mt-0.5">✓</span>
+                      <span>Pleasant traditional chime sound – no wires, no drilling, no batteries.</span>
+                    </li>
+                    <li class="flex gap-2">
+                      <span class="text-emerald-500 mt-0.5">✓</span>
+                      <span>Premium polished wood – designed for long-term daily use.</span>
+                    </li>
+                  </ul>
+                  <div class="mt-3 flex items-center justify-between text-[11px] sm:text-xs text-slate-600 gap-3">
+                    <div>
+                      <div>COD Offer ends in <span id="offer-timer" class="font-semibold text-emerald-600">14:59</span></div>
+                      <div class="mt-0.5">Hurry! Only <span id="stock-count" class="font-semibold text-red-600">24</span> sets left for today's COD offer.</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-[10px] text-slate-400">Ships from</div>
+                      <div class="text-xs font-medium text-slate-700">New Delhi, India</div>
+                    </div>
+                  </div>
+                  <button data-scroll-order class="mt-4 btn-primary w-full text-sm font-semibold rounded-full px-4 py-3 flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/40">
+                    <span>Order Now – Cash on Delivery</span>
+                    <span class="text-lg leading-none">→</span>
+                  </button>
+                  <p class="mt-1 text-[11px] text-center text-slate-500">
+                    No online payment needed. Pay safely in cash or UPI to the delivery agent after receiving your order.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trust Bar -->
+      <section id="trust-bar" class="bg-white border-b border-slate-200/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
+          <div class="flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm text-slate-700">
+            <div class="flex items-center gap-2 min-w-[9rem]">
+              <div class="trust-bar-icon">
+                <span class="font-semibold text-base">₹</span>
+              </div>
+              <div>
+                <div class="font-semibold text-slate-900">Cash on Delivery</div>
+                <div class="text-[11px] text-slate-500">Pay only after product reaches you</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 min-w-[9rem]">
+              <div class="trust-bar-icon bg-sky-100 text-sky-600">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M3 7.5h13.5l3 4.5-3 4.5H3V7.5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3 9.5h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-slate-900">Free Delivery</div>
+                <div class="text-[11px] text-slate-500">All orders across India</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 min-w-[9rem]">
+              <div class="trust-bar-icon bg-amber-100 text-amber-600">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M5 8a7 7 0 0 1 12-2m2 10a7 7 0 0 1-12 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M5 8V4m0 4h4m10 8v4m0-4h-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-slate-900">Easy Replacement</div>
+                <div class="text-[11px] text-slate-500">7-day hassle-free policy</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 min-w-[9rem]">
+              <div class="trust-bar-icon whatsapp-btn text-white">
+                <svg viewBox="0 0 32 32" class="h-4 w-4" aria-hidden="true">
+                  <path fill="currentColor" d="M16.04 5.333c-5.2 0-9.414 4.187-9.414 9.36 0 1.65.44 3.257 1.28 4.68L6 27l7.853-1.882a9.58 9.58 0 0 0 2.187.256h.007c5.2 0 9.413-4.187 9.413-9.36 0-2.504-.98-4.86-2.76-6.627a9.39 9.39 0 0 0-6.66-2.72Zm0 1.867c2.005 0 3.885.78 5.3 2.193a7.43 7.43 0 0 1 2.2 5.3c0 4.127-3.387 7.48-7.54 7.48h-.006a7.64 7.64 0 0 1-1.94-.24l-.44-.12-4.653 1.12 1.24-4.493-.287-.46a7.42 7.42 0 0 1-1.153-3.987c0-4.127 3.387-7.48 7.54-7.48Zm-3.013 3.293c-.146-.32-.3-.327-.44-.333-.114-.006-.253-.006-.392-.006-.14 0-.36.053-.547.26-.187.206-.72.7-.72 1.707s.737 1.98.84 2.118c.107.133 1.433 2.26 3.54 3.078 1.75.68 2.1.547 2.48.507.38-.04 1.22-.493 1.393-.973.173-.48.173-.893.12-.98-.053-.093-.193-.146-.406-.253-.214-.106-1.26-.626-1.454-.7-.194-.066-.334-.1-.474.106-.14.2-.547.7-.673.846-.127.14-.247.153-.46.047-.213-.106-.9-.333-1.716-1.06-.634-.56-1.06-1.247-1.187-1.454-.127-.206-.013-.313.094-.419.094-.093.214-.24.32-.36.107-.12.14-.2.214-.333.073-.133.04-.253-.02-.36-.054-.1-.48-1.206-.68-1.654Z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-slate-900">WhatsApp Support</div>
+                <div class="text-[11px] text-slate-500">Order / track easily</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 min-w-[9rem]">
+              <div class="trust-bar-icon bg-slate-900 text-emerald-400">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="5" y="11" width="14" height="9" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M9 11V8a3 3 0 0 1 6 0v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-slate-900">Secure Checkout</div>
+                <div class="text-[11px] text-slate-500">Your data stays protected</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Product Section -->
+      <section id="featured-product" class="section-padding">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col lg:flex-row gap-8 lg:gap-10 items-start">
+            <div class="w-full lg:w-1/2">
+              <div class="relative rounded-2xl overflow-hidden shadow-soft card">
+                <div class="absolute top-3 left-3 z-10 flex flex-col gap-2">
+                  <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 text-emerald-800 px-3 py-1 text-xs font-semibold shadow-sm">
+                    <span>🔥 Buy 1 Get 1 Free</span>
+                  </span>
+                  <span class="inline-flex items-center gap-1.5 rounded-full bg-black/70 text-emerald-200 px-3 py-1 text-[11px]">
+                    <span class="star text-yellow-300">★</span>
+                    <span>Trusted COD Product</span>
+                  </span>
+                </div>
+                <img src="https://images.pexels.com/photos/3825580/pexels-photo-3825580.jpeg?auto=compress&cs=tinysrgb&w=800" alt="ASHTAMI VERRA Wooden Magnetic Door Bell Featured" class="w-full h-72 sm:h-80 object-cover">
+              </div>
+              <div class="mt-3 flex gap-2">
+                <img src="https://images.pexels.com/photos/3825581/pexels-photo-3825581.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Door Bell close-up" class="w-1/3 h-20 object-cover rounded-xl border border-slate-200/80">
+                <img src="https://images.pexels.com/photos/3825577/pexels-photo-3825577.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Mounted on door" class="w-1/3 h-20 object-cover rounded-xl border border-slate-200/80">
+                <img src="https://images.pexels.com/photos/8892282/pexels-photo-8892282.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Packed product" class="w-1/3 h-20 object-cover rounded-xl border border-slate-200/80">
+              </div>
+            </div>
+            <div class="w-full lg:w-1/2">
+              <h2 class="text-2xl sm:text-3xl font-display font-semibold text-slate-900 mb-2">
+                Wooden Magnetic Door Bell – Buy 1 Get 1 Free
+              </h2>
+              <p class="text-sm text-slate-600 mb-3">
+                Bring a warm, welcoming sound to your home with this premium wooden magnetic door bell – specially designed for Indian homes and rented apartments. No drilling, no wiring, no damage.
+              </p>
+              <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-3">
+                <div class="flex items-baseline gap-1">
+                  <span class="text-2xl font-semibold text-emerald-600">₹999</span>
+                  <span class="text-xs text-slate-500">for 2 pieces</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs">
+                  <span class="line-through text-slate-400">MRP ₹1,999</span>
+                  <span class="rounded-full bg-emerald-50 text-emerald-700 px-2 py-0.5 font-medium">50% OFF + Free Shipping</span>
+                </div>
+              </div>
+              <div class="flex items-center flex-wrap gap-2 mb-4 text-xs text-slate-600">
+                <span class="cod-label flex items-center gap-1">
+                  <span class="font-semibold">COD</span>
+                  <span>Available on this product</span>
+                </span>
+                <span class="inline-flex items-center gap-1 rounded-full bg-emerald-50 text-emerald-700 px-2 py-0.5">
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                  <span>Free Shipping • No extra charges</span>
+                </span>
+                <span class="inline-flex items-center gap-1 rounded-full bg-sky-50 text-sky-700 px-2 py-0.5">
+                  <span class="h-1.5 w-1.5 rounded-full bg-sky-500"></span>
+                  <span>GST Invoice Included</span>
+                </span>
+              </div>
+              <div class="mb-4 space-y-3 text-sm">
+                <div>
+                  <div class="text-xs font-semibold text-slate-700 mb-1 uppercase tracking-[0.15em]">Choose Design</div>
+                  <div class="flex flex-wrap gap-2">
+                    <button type="button" class="variant-pill selected" data-group="design" data-value="Classic Teak">
+                      <span class="h-3 w-3 rounded-full bg-amber-700"></span>
+                      <span>Classic Teak</span>
+                    </button>
+                    <button type="button" class="variant-pill" data-group="design" data-value="Dark Walnut">
+                      <span class="h-3 w-3 rounded-full bg-amber-900"></span>
+                      <span>Dark Walnut</span>
+                    </button>
+                    <button type="button" class="variant-pill" data-group="design" data-value="Light Oak">
+                      <span class="h-3 w-3 rounded-full bg-amber-500"></span>
+                      <span>Light Oak</span>
+                    </button>
+                  </div>
+                </div>
+                <div>
+                  <div class="text-xs font-semibold text-slate-700 mb-1 uppercase tracking-[0.15em]">Sound Type</div>
+                  <div class="flex flex-wrap gap-2">
+                    <button type="button" class="variant-pill selected" data-group="sound" data-value="Soft Temple Bell">
+                      <span>🔔</span>
+                      <span>Soft Temple Bell</span>
+                    </button>
+                    <button type="button" class="variant-pill" data-group="sound" data-value="Classic Chime">
+                      <span>🎐</span>
+                      <span>Classic Chime</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="text-xs text-slate-600">
+                  Selected: <span class="font-semibold text-slate-900" id="design-value">Classic Teak</span> •
+                  <span class="font-semibold text-slate-900" id="sound-value">Soft Temple Bell</span>
+                </div>
+              </div>
+              <ul class="mb-4 space-y-2 text-sm text-slate-700">
+                <li class="flex gap-2">
+                  <span class="mt-0.5 text-emerald-500">✓</span>
+                  <span>No drilling or screws – perfect for rented homes & apartments.</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-0.5 text-emerald-500">✓</span>
+                  <span>Strong neodymium magnets – holds firmly without damaging doors.</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-0.5 text-emerald-500">✓</span>
+                  <span>Suitable for wooden, metal and most laminate doors.</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-0.5 text-emerald-500">✓</span>
+                  <span>Eco-friendly, battery-free operation – works forever with simple push.</span>
+                </li>
+              </ul>
+              <div class="mt-4 flex flex-col sm:flex-row gap-3">
+                <button data-scroll-order class="btn-primary w-full sm:w-auto text-sm sm:text-base font-semibold rounded-full px-6 py-3 flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/40">
+                  <span>Order Now – COD</span>
+                  <span class="text-lg leading-none">→</span>
+                </button>
+                <button type="button" data-whatsapp class="whatsapp-btn w-full sm:w-auto text-sm font-semibold rounded-full px-5 py-3 flex items-center justify-center gap-2 text-white shadow-lg shadow-emerald-500/40">
+                  <svg viewBox="0 0 32 32" class="h-4 w-4" aria-hidden="true">
+                    <path fill="currentColor" d="M16.04 5.333c-5.2 0-9.414 4.187-9.414 9.36 0 1.65.44 3.257 1.28 4.68L6 27l7.853-1.882a9.58 9.58 0 0 0 2.187.256h.007c5.2 0 9.413-4.187 9.413-9.36 0-2.504-.98-4.86-2.76-6.627a9.39 9.39 0 0 0-6.66-2.72Zm0 1.867c2.005 0 3.885.78 5.3 2.193a7.43 7.43 0 0 1 2.2 5.3c0 4.127-3.387 7.48-7.54 7.48h-.006a7.64 7.64 0 0 1-1.94-.24l-.44-.12-4.653 1.12 1.24-4.493-.287-.46a7.42 7.42 0 0 1-1.153-3.987c0-4.127 3.387-7.48 7.54-7.48Zm-3.013 3.293c-.146-.32-.3-.327-.44-.333-.114-.006-.253-.006-.392-.006-.14 0-.36.053-.547.26-.187.206-.72.7-.72 1.707s.737 1.98.84 2.118c.107.133 1.433 2.26 3.54 3.078 1.75.68 2.1.547 2.48.507.38-.04 1.22-.493 1.393-.973.173-.48.173-.893.12-.98-.053-.093-.193-.146-.406-.253-.214-.106-1.26-.626-1.454-.7-.194-.066-.334-.1-.474.106-.14.2-.547.7-.673.846-.127.14-.247.153-.46.047-.213-.106-.9-.333-1.716-1.06-.634-.56-1.06-1.247-1.187-1.454-.127-.206-.013-.313.094-.419.094-.093.214-.24.32-.36.107-.12.14-.2.214-.333.073-.133.04-.253-.02-.36-.054-.1-.48-1.206-.68-1.654Z"/>
+                  </svg>
+                  <span>Order via WhatsApp (COD)</span>
+                </button>
+              </div>
+              <p class="mt-2 text-[11px] text-slate-500">
+                Complete your delivery address on the next step. Pay in cash or UPI when the delivery partner hands over the product. No prepaid risk – COD only.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Order Form Section -->
+      <section id="order-section" class="section-padding bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-2xl mx-auto card rounded-2xl shadow-soft p-5 sm:p-6 lg:p-7">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div>
+                <h2 class="text-xl sm:text-2xl font-display font-semibold text-slate-900">
+                  Place Your Cash on Delivery Order
+                </h2>
+                <p class="mt-1 text-xs sm:text-sm text-slate-600">
+                  Fill in your details below. Our team will confirm your order over call or WhatsApp before dispatch.
+                </p>
+              </div>
+              <div class="hidden sm:flex flex-col items-end text-xs text-slate-600">
+                <div class="flex items-center gap-1">
+                  <span class="inline-flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span>COD Slots Available</span>
+                </div>
+                <div>Dispatch within <span class="font-semibold">24–48 hours</span></div>
+              </div>
+            </div>
+            <form id="cod-order-form" class="space-y-4">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="full-name" class="block text-xs font-medium text-slate-700 mb-1.5">Full Name</label>
+                  <input id="full-name" name="full-name" type="text" required class="input-field" placeholder="Enter your full name">
+                </div>
+                <div>
+                  <label for="phone" class="block text-xs font-medium text-slate-700 mb-1.5">Mobile Number (WhatsApp preferred)</label>
+                  <input id="phone" name="phone" type="tel" required pattern="[0-9]{10}" maxlength="10" class="input-field" placeholder="10-digit mobile number">
+                  <p class="mt-1 text-[11px] text-slate-500">We only use this to confirm your COD order.</p>
+                </div>
+              </div>
+              <div>
+                <label for="address" class="block text-xs font-medium text-slate-700 mb-1.5">Full Address</label>
+                <textarea id="address" name="address" rows="3" required class="input-field" placeholder="House number, street, area"></textarea>
+              </div>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="landmark" class="block text-xs font-medium text-slate-700 mb-1.5">Nearby Landmark (Optional)</label>
+                  <input id="landmark" name="landmark" type="text" class="input-field" placeholder="Near temple, school, etc.">
+                </div>
+                <div>
+                  <label for="pincode" class="block text-xs font-medium text-slate-700 mb-1.5">PIN Code</label>
+                  <input id="pincode" name="pincode" type="text" required maxlength="6" pattern="[0-9]{6}" class="input-field" placeholder="6-digit PIN code">
+                  <p id="pincode-message" class="mt-1 text-[11px] text-emerald-600 hidden"></p>
+                </div>
+              </div>
+              <div class="grid sm:grid-cols-3 gap-4">
+                <div>
+                  <label for="city" class="block text-xs font-medium text-slate-700 mb-1.5">City</label>
+                  <input id="city" name="city" type="text" required class="input-field" placeholder="e.g. Mumbai">
+                </div>
+                <div>
+                  <label for="state" class="block text-xs font-medium text-slate-700 mb-1.5">State</label>
+                  <input id="state" name="state" type="text" required class="input-field" placeholder="e.g. Maharashtra">
+                </div>
+                <div>
+                  <label for="quantity" class="block text-xs font-medium text-slate-700 mb-1.5">Quantity (Sets of 2)</label>
+                  <select id="quantity" name="quantity" class="input-field">
+                    <option value="1">1 Set (2 Door Bells)</option>
+                    <option value="2">2 Sets (4 Door Bells)</option>
+                    <option value="3">3 Sets (6 Door Bells)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div class="border border-emerald-200 bg-emerald-50 rounded-xl p-3 flex items-start gap-2">
+                  <div class="mt-0.5">
+                    <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500 text-white text-xs font-semibold">₹</span>
+                  </div>
+                  <div class="text-[11px] sm:text-xs text-emerald-800">
+                    <div class="font-semibold mb-0.5">Cash on Delivery Selected</div>
+                    <p>Pay only after your ASHTAMI VERRA order reaches your doorstep. No advance payment required – full COD safety.</p>
+                  </div>
+                </div>
+                <div class="border border-slate-200 rounded-xl p-3 text-[11px] sm:text-xs text-slate-600">
+                  <div class="font-semibold mb-0.5">Order Summary</div>
+                  <p>Wooden Magnetic Door Bell – Buy 1 Get 1 Free offer applies automatically. Free delivery and GST included in the price.</p>
+                </div>
+              </div>
+              <button type="submit" class="btn-primary w-full text-sm sm:text-base font-semibold rounded-full px-4 py-3.5 flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/40">
+                <span>Confirm My COD Order</span>
+                <span class="text-lg leading-none">→</span>
+              </button>
+              <p class="mt-1 text-[11px] text-center text-slate-500">
+                By placing this order, you agree to our <a href="#privacy" class="underline">Privacy</a>, <a href="#refund" class="underline">Refund</a> and <a href="#shipping" class="underline">Shipping</a> policies.
+              </p>
+              <p id="form-message" class="mt-3 text-xs text-emerald-600 text-center hidden"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose ASHTAMI VERRA -->
+      <section id="why-us" class="section-padding">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-[1.1fr,0.9fr] gap-8 items-center">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-display font-semibold text-slate-900 mb-2">
+                Why Choose ASHTAMI VERRA?
+              </h2>
+              <p class="text-sm text-slate-600 mb-4">
+                An Indian brand you can trust for premium quality, honest pricing and safe Cash on Delivery on every order.
+              </p>
+              <ul class="space-y-3 text-sm text-slate-700">
+                <li class="flex gap-3">
+                  <span class="mt-0.5 text-emerald-500">✓</span>
+                  <div>
+                    <div class="font-semibold">Handpicked quality products</div>
+                    <p class="text-sm text-slate-600">Each product is tested for daily Indian home use before it is listed on our store.</p>
+                  </div>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-0.5 text-emerald-500">✓</span>
+                  <div>
+                    <div class="font-semibold">10,000+ happy customers</div>
+                    <p class="text-sm text-slate-600">From metros to small towns, families across India trust ASHTAMI VERRA for reliable COD deliveries.</p>
+                  </div>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-0.5 text-emerald-500">✓</span>
+                  <div>
+                    <div class="font-semibold">Fast Indian delivery</div>
+                    <p class="text-sm text-slate-600">We dispatch most orders within 24–48 hours with full tracking and COD at your location.</p>
+                  </div>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-0.5 text-emerald-500">✓</span>
+                  <div>
+                    <div class="font-semibold">No prepaid risk – COD available</div>
+                    <p class="text-sm text-slate-600">Worried about online scams? With ASHTAMI VERRA you only pay after you receive your product in hand.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="card rounded-2xl shadow-soft p-5 sm:p-6 flex flex-col gap-3">
+              <div class="flex items-center gap-3">
+                <div class="h-10 w-10 rounded-full bg-emerald-500 text-white flex items-center justify-center font-semibold text-lg">
+                  4.8
+                </div>
+                <div class="text-sm text-slate-700">
+                  <div class="flex items-center gap-1 text-yellow-400 text-base leading-none">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <p class="text-xs text-slate-500 mt-1">Average rating from 10,000+ Indian customers on our COD orders.</p>
+                </div>
+              </div>
+              <div class="border-t border-slate-100 pt-3 text-xs text-slate-600 space-y-2">
+                <div class="flex items-center justify-between">
+                  <span>Pan-India COD coverage</span>
+                  <span class="font-semibold text-slate-900">27+ states</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span>Repeat customers ordering again</span>
+                  <span class="font-semibold text-emerald-600">72%</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span>Average dispatch time</span>
+                  <span class="font-semibold text-slate-900">24–48 hours</span>
+                </div>
+              </div>
+              <div class="mt-2 text-[11px] text-slate-500">
+                We are a GST-registered Indian business. All orders are carefully packed and shipped from our warehouse with full tracking and secure Cash on Delivery.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works -->
+      <section id="how-it-works" class="section-padding bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl sm:text-3xl font-display font-semibold text-slate-900 text-center mb-2">
+            How Cash on Delivery Works
+          </h2>
+          <p class="text-sm text-slate-600 text-center mb-6 max-w-2xl mx-auto">
+            Simple 3-step process to get ASHTAMI VERRA products delivered to your doorstep with full COD safety.
+          </p>
+          <div class="grid md:grid-cols-3 gap-5">
+            <div class="card rounded-2xl p-4 sm:p-5 shadow-soft">
+              <div class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-emerald-100 text-emerald-700 text-sm font-semibold mb-3">1</div>
+              <h3 class="text-sm font-semibold text-slate-900 mb-1.5">Choose Product</h3>
+              <p class="text-xs text-slate-600">
+                Select the Wooden Magnetic Door Bell (Buy 1 Get 1 Free) or other home essentials you like from ASHTAMI VERRA.
+              </p>
+            </div>
+            <div class="card rounded-2xl p-4 sm:p-5 shadow-soft">
+              <div class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-emerald-100 text-emerald-700 text-sm font-semibold mb-3">2</div>
+              <h3 class="text-sm font-semibold text-slate-900 mb-1.5">Place Order (COD)</h3>
+              <p class="text-xs text-slate-600">
+                Fill your name, address and PIN code. Choose <span class="font-semibold">Cash on Delivery</span> – no online payment needed. Our team confirms your order.
+              </p>
+            </div>
+            <div class="card rounded-2xl p-4 sm:p-5 shadow-soft">
+              <div class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-emerald-100 text-emerald-700 text-sm font-semibold mb-3">3</div>
+              <h3 class="text-sm font-semibold text-slate-900 mb-1.5">Receive & Pay</h3>
+              <p class="text-xs text-slate-600">
+                Your order is delivered to your doorstep. Check the parcel and <span class="font-semibold">pay in cash or UPI</span> to the delivery partner – simple and safe.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer Reviews -->
+      <section id="reviews" class="section-padding">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-5">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-display font-semibold text-slate-900">Customer Reviews</h2>
+              <p class="text-sm text-slate-600">
+                Real feedback from Indian families using our Wooden Magnetic Door Bell.
+              </p>
+            </div>
+            <div class="text-xs text-slate-600">
+              <div class="flex items-center gap-1">
+                <span class="text-yellow-400 text-base leading-none">★★★★★</span>
+                <span class="font-semibold text-slate-900">4.8/5</span>
+                <span>• 2,345 verified COD buyers</span>
+              </div>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-3 gap-4">
+            <div class="card rounded-2xl p-4 border border-slate-100 shadow-soft">
+              <div class="flex items-center gap-3 mb-2">
+                <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Customer photo" class="h-9 w-9 rounded-full object-cover">
+                <div>
+                  <div class="text-sm font-semibold text-slate-900">Rahul Sharma</div>
+                  <div class="text-[11px] text-slate-500">Mumbai, Maharashtra</div>
+                </div>
+              </div>
+              <div class="text-yellow-400 text-xs mb-1">★★★★★</div>
+              <p class="text-xs text-slate-700 mb-2">
+                "Sound is very soothing, bilkul mandir jaisi awaaz. Magnetic grip is strong and I fixed it in 2 minutes. COD tha isliye tension nahi tha. Totally worth it."
+              </p>
+              <p class="text-[11px] text-emerald-700 font-medium">Verified COD Purchase</p>
+            </div>
+            <div class="card rounded-2xl p-4 border border-slate-100 shadow-soft">
+              <div class="flex items-center gap-3 mb-2">
+                <img src="https://images.pexels.com/photos/3760852/pexels-photo-3760852.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Customer photo" class="h-9 w-9 rounded-full object-cover">
+                <div>
+                  <div class="text-sm font-semibold text-slate-900">Priya Nair</div>
+                  <div class="text-[11px] text-slate-500">Bengaluru, Karnataka</div>
+                </div>
+              </div>
+              <div class="text-yellow-400 text-xs mb-1">★★★★★</div>
+              <p class="text-xs text-slate-700 mb-2">
+                "I stay in a rented flat so drilling was not allowed. This magnetic door bell solved my problem. Looks premium and landlord bhi khush. COD delivery was smooth."
+              </p>
+              <p class="text-[11px] text-emerald-700 font-medium">Verified COD Purchase</p>
+            </div>
+            <div class="card rounded-2xl p-4 border border-slate-100 shadow-soft">
+              <div class="flex items-center gap-3 mb-2">
+                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Customer photo" class="h-9 w-9 rounded-full object-cover">
+                <div>
+                  <div class="text-sm font-semibold text-slate-900">Sandeep Kumar</div>
+                  <div class="text-[11px] text-slate-500">Patna, Bihar</div>
+                </div>
+              </div>
+              <div class="text-yellow-400 text-xs mb-1">★★★★☆</div>
+              <p class="text-xs text-slate-700 mb-2">
+                "Packing achha tha, delivery 5 din me aa gaya. Buy 1 Get 1 mein 2 bells mile, ek main door par aur ek parents ke ghar bhej diya. Cash on Delivery se bharosa bana."
+              </p>
+              <p class="text-[11px] text-emerald-700 font-medium">Verified COD Purchase</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" class="section-padding bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl sm:text-3xl font-display font-semibold text-slate-900 text-center mb-2">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-sm text-slate-600 text-center mb-5">
+            Have doubts before ordering on Cash on Delivery? Find your answers below.
+          </p>
+          <div class="mt-3 space-y-2.5">
+            <div class="card faq-item rounded-xl border border-slate-200/80">
+              <button type="button" class="w-full flex items-center justify-between gap-4 px-4 sm:px-5 py-3 sm:py-3.5 text-left">
+                <div>
+                  <p class="text-sm font-semibold text-slate-900">Is Cash on Delivery (COD) available?</p>
+                  <p class="text-[11px] text-slate-500 mt-0.5">I don't want to pay online. Can I pay after delivery?</p>
+                </div>
+                <div class="faq-chevron text-slate-500">
+                  <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M5 7.5 10 12l5-4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-answer px-4 sm:px-5 pb-4 text-xs text-slate-600">
+                Yes, <span class="font-semibold text-emerald-700">100% COD is available</span> on this product across India. You don't have to pay anything online – simply place your order and pay in cash or UPI to the delivery person when the parcel reaches you.
+              </div>
+            </div>
+
+            <div class="card faq-item rounded-xl border border-slate-200/80">
+              <button type="button" class="w-full flex items-center justify-between gap-4 px-4 sm:px-5 py-3 sm:py-3.5 text-left">
+                <div>
+                  <p class="text-sm font-semibold text-slate-900">How many pieces in Buy 1 Get 1 offer?</p>
+                  <p class="text-[11px] text-slate-500 mt-0.5">What exactly will I receive?</p>
+                </div>
+                <div class="faq-chevron text-slate-500">
+                  <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M5 7.5 10 12l5-4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-answer px-4 sm:px-5 pb-4 text-xs text-slate-600">
+                In this <span class="font-semibold">Buy 1 Get 1 Free</span> offer, you receive a total of <span class="font-semibold">2 Wooden Magnetic Door Bells</span> (1 paid + 1 free) in a single set, at just ₹999 with free shipping and GST included.
+              </div>
+            </div>
+
+            <div class="card faq-item rounded-xl border border-slate-200/80">
+              <button type="button" class="w-full flex items-center justify-between gap-4 px-4 sm:px-5 py-3 sm:py-3.5 text-left">
+                <div>
+                  <p class="text-sm font-semibold text-slate-900">What is the delivery time?</p>
+                  <p class="text-[11px] text-slate-500 mt-0.5">In how many days will I get my order?</p>
+                </div>
+                <div class="faq-chevron text-slate-500">
+                  <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M5 7.5 10 12l5-4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-answer px-4 sm:px-5 pb-4 text-xs text-slate-600">
+                We usually dispatch orders within <span class="font-semibold">24–48 hours</span> of confirmation. After dispatch, delivery time is typically:
+                <ul class="list-disc pl-5 mt-1.5 space-y-0.5">
+                  <li>Metro cities: 3–5 working days</li>
+                  <li>Tier 2 & Tier 3 cities: 4–7 working days</li>
+                  <li>Remote / village areas: 6–9 working days</li>
+                </ul>
+                You will receive SMS / WhatsApp updates for your Cash on Delivery shipment.
+              </div>
+            </div>
+
+            <div class="card faq-item rounded-xl border border-slate-200/80">
+              <button type="button" class="w-full flex items-center justify-between gap-4 px-4 sm:px-5 py-3 sm:py-3.5 text-left">
+                <div>
+                  <p class="text-sm font-semibold text-slate-900">What is your replacement policy?</p>
+                  <p class="text-[11px] text-slate-500 mt-0.5">What if the product is damaged or defective?</p>
+                </div>
+                <div class="faq-chevron text-slate-500">
+                  <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M5 7.5 10 12l5-4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-answer px-4 sm:px-5 pb-4 text-xs text-slate-600">
+                We offer a <span class="font-semibold">7-day easy replacement</span> policy. If you receive a damaged, defective or different product, simply contact us on WhatsApp with photos within 7 days of delivery. We will arrange a quick replacement as per our
+                <a href="#refund" class="underline text-emerald-700 font-medium">Refund & Replacement Policy</a>.
+              </div>
+            </div>
+
+            <div class="card faq-item rounded-xl border border-slate-200/80">
+              <button type="button" class="w-full flex items-center justify-between gap-4 px-4 sm:px-5 py-3 sm:py-3.5 text-left">
+                <div>
+                  <p class="text-sm font-semibold text-slate-900">Will this door bell fit my door?</p>
+                  <p class="text-[11px] text-slate-500 mt-0.5">My door is wooden / metal / laminated – will it work?</p>
+                </div>
+                <div class="faq-chevron text-slate-500">
+                  <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M5 7.5 10 12l5-4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-answer px-4 sm:px-5 pb-4 text-xs text-slate-600">
+                Our Wooden Magnetic Door Bell is designed to work with most <span class="font-semibold">wooden and metal doors</span> commonly used in Indian homes. For very thick or heavily cushioned doors, you can contact us on WhatsApp with a picture and we will guide you.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer & Policies -->
+      <section id="policies" class="bg-slate-900 text-slate-100 pt-10 pb-6">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-4 gap-8">
+            <div class="lg:col-span-1">
+              <div class="flex items-center gap-2 mb-3">
+                <div class="h-9 w-9 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-700 flex items-center justify-center text-slate-900 font-semibold text-lg shadow-lg shadow-emerald-500/40">
+                  AV
+                </div>
+                <div>
+                  <div class="font-display text-base font-semibold tracking-wide leading-tight">ASHTAMI VERRA</div>
+                  <div class="text-[11px] text-emerald-300 uppercase tracking-[0.15em] leading-tight">Home Essentials</div>
+                </div>
+              </div>
+              <p class="text-xs text-slate-300 mb-3">
+                ASHTAMI VERRA is an Indian brand focused on premium, everyday home essentials with honest pricing and safe Cash on Delivery. From our warehouse to your doorstep – we take full responsibility till you are satisfied.
+              </p>
+              <p class="text-[11px] text-slate-400">
+                GST Registered • Indian-owned • COD-first store
+              </p>
+            </div>
+            <div>
+              <h3 class="text-sm font-semibold mb-2">Quick Links</h3>
+              <ul class="space-y-1.5 text-xs text-slate-300">
+                <li><a href="#hero" class="hover:text-emerald-300 transition-colors">Home</a></li>
+                <li><a href="#featured-product" class="hover:text-emerald-300 transition-colors">Featured Product</a></li>
+                <li><a href="#order-section" class="hover:text-emerald-300 transition-colors">Order with COD</a></li>
+                <li><a href="#reviews" class="hover:text-emerald-300 transition-colors">Customer Reviews</a></li>
+                <li><a href="#faq" class="hover:text-emerald-300 transition-colors">FAQs</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-sm font-semibold mb-2">Contact & Support</h3>
+              <ul class="space-y-1.5 text-xs text-slate-300 mb-3">
+                <li><span class="text-slate-400">Customer Care (Mon–Sat, 10am–7pm)</span></li>
+                <li><span class="font-semibold text-slate-100">Phone:</span> <a href="tel:+919876543210" class="hover:text-emerald-300 transition-colors">+91-98765-43210</a></li>
+                <li><span class="font-semibold text-slate-100">Email:</span> <a href="mailto:support@ashtamiverra.in" class="hover:text-emerald-300 transition-colors">support@ashtamiverra.in</a></li>
+                <li><span class="font-semibold text-slate-100">Address:</span> New Delhi, India</li>
+              </ul>
+              <button type="button" data-whatsapp class="whatsapp-btn text-xs font-semibold rounded-full px-4 py-2.5 flex items-center justify-center gap-2 text-white shadow-lg shadow-emerald-500/40">
+                <svg viewBox="0 0 32 32" class="h-4 w-4" aria-hidden="true">
+                  <path fill="currentColor" d="M16.04 5.333c-5.2 0-9.414 4.187-9.414 9.36 0 1.65.44 3.257 1.28 4.68L6 27l7.853-1.882a9.58 9.58 0 0 0 2.187.256h.007c5.2 0 9.413-4.187 9.413-9.36 0-2.504-.98-4.86-2.76-6.627a9.39 9.39 0 0 0-6.66-2.72Zm0 1.867c2.005 0 3.885.78 5.3 2.193a7.43 7.43 0 0 1 2.2 5.3c0 4.127-3.387 7.48-7.54 7.48h-.006a7.64 7.64 0 0 1-1.94-.24l-.44-.12-4.653 1.12 1.24-4.493-.287-.46a7.42 7.42 0 0 1-1.153-3.987c0-4.127 3.387-7.48 7.54-7.48Zm-3.013 3.293c-.146-.32-.3-.327-.44-.333-.114-.006-.253-.006-.392-.006-.14 0-.36.053-.547.26-.187.206-.72.7-.72 1.707s.737 1.98.84 2.118c.107.133 1.433 2.26 3.54 3.078 1.75.68 2.1.547 2.48.507.38-.04 1.22-.493 1.393-.973.173-.48.173-.893.12-.98-.053-.093-.193-.146-.406-.253-.214-.106-1.26-.626-1.454-.7-.194-.066-.334-.1-.474.106-.14.2-.547.7-.673.846-.127.14-.247.153-.46.047-.213-.106-.9-.333-1.716-1.06-.634-.56-1.06-1.247-1.187-1.454-.127-.206-.013-.313.094-.419.094-.093.214-.24.32-.36.107-.12.14-.2.214-.333.073-.133.04-.253-.02-.36-.054-.1-.48-1.206-.68-1.654Z"/>
+                </svg>
+                <span>WhatsApp Us for COD Order</span>
+              </button>
+            </div>
+            <div class="space-y-3">
+              <div id="privacy">
+                <h3 class="text-sm font-semibold mb-1">Privacy Policy</h3>
+                <p class="text-[11px] text-slate-300">
+                  We respect your privacy. Your personal details are used only to process and deliver your order. We do not sell or share your data with third parties except our trusted logistics partners for delivery.
+                </p>
+              </div>
+              <div id="refund">
+                <h3 class="text-sm font-semibold mb-1 mt-2">Refund & Replacement Policy</h3>
+                <p class="text-[11px] text-slate-300">
+                  In case of damaged, defective or wrong product, contact us within 7 days of delivery with photos. After verification, we provide a free replacement or refund as per the case. For COD, refunds are processed to your bank / UPI.
+                </p>
+              </div>
+              <div id="shipping">
+                <h3 class="text-sm font-semibold mb-1 mt-2">Shipping Policy</h3>
+                <p class="text-[11px] text-slate-300">
+                  We offer free pan-India shipping on all orders. Orders are dispatched within 24–48 hours and delivered within 3–9 working days depending on your PIN code. Full tracking and Cash on Delivery are available.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800 text-[11px] text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+            <p>© <span id="year"></span> ASHTAMI VERRA. All Rights Reserved.</p>
+            <p>Made for Indian customers – COD-first, trust-focused shopping experience.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Floating WhatsApp Button (Desktop) -->
+    <div class="hidden md:block fixed bottom-20 right-4 z-30">
+      <button type="button" data-whatsapp class="whatsapp-btn rounded-full px-4 py-2.5 flex items-center gap-2 text-xs font-semibold text-white shadow-lg shadow-emerald-500/40">
+        <svg viewBox="0 0 32 32" class="h-4 w-4" aria-hidden="true">
+          <path fill="currentColor" d="M16.04 5.333c-5.2 0-9.414 4.187-9.414 9.36 0 1.65.44 3.257 1.28 4.68L6 27l7.853-1.882a9.58 9.58 0 0 0 2.187.256h.007c5.2 0 9.413-4.187 9.413-9.36 0-2.504-.98-4.86-2.76-6.627a9.39 9.39 0 0 0-6.66-2.72Zm0 1.867c2.005 0 3.885.78 5.3 2.193a7.43 7.43 0 0 1 2.2 5.3c0 4.127-3.387 7.48-7.54 7.48h-.006a7.64 7.64 0 0 1-1.94-.24l-.44-.12-4.653 1.12 1.24-4.493-.287-.46a7.42 7.42 0 0 1-1.153-3.987c0-4.127 3.387-7.48 7.54-7.48Zm-3.013 3.293c-.146-.32-.3-.327-.44-.333-.114-.006-.253-.006-.392-.006-.14 0-.36.053-.547.26-.187.206-.72.7-.72 1.707s.737 1.98.84 2.118c.107.133 1.433 2.26 3.54 3.078 1.75.68 2.1.547 2.48.507.38-.04 1.22-.493 1.393-.973.173-.48.173-.893.12-.98-.053-.093-.193-.146-.406-.253-.214-.106-1.26-.626-1.454-.7-.194-.066-.334-.1-.474.106-.14.2-.547.7-.673.846-.127.14-.247.153-.46.047-.213-.106-.9-.333-1.716-1.06-.634-.56-1.06-1.247-1.187-1.454-.127-.206-.013-.313.094-.419.094-.093.214-.24.32-.36.107-.12.14-.2.214-.333.073-.133.04-.253-.02-.36-.054-.1-.48-1.206-.68-1.654Z"/>
+        </svg>
+        <span>Chat & Order on WhatsApp (COD)</span>
+      </button>
+    </div>
+
+    <!-- Mobile Sticky COD CTA -->
+    <div class="sticky-cta fixed bottom-0 inset-x-0 bg-white lg:hidden border-t border-slate-200/80 z-40">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+        <div class="text-[11px] leading-tight">
+          <div class="font-semibold text-slate-900 flex items-center gap-1">
+            <span class="inline-flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Cash on Delivery Available</span>
+          </div>
+          <div class="text-slate-500">Tap to order Door Bell – Buy 1 Get 1 Free</div>
+        </div>
+        <button data-scroll-order class="btn-primary text-xs font-semibold rounded-full px-3.5 py-2 flex items-center gap-1.5">
+          <span>Order Now</span>
+          <span class="text-sm leading-none">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Smooth scroll for nav links
+      document.querySelectorAll('[data-scroll-to]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          var targetId = this.getAttribute('data-scroll-to');
+          var target = document.getElementById(targetId);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+          var mobileMenu = document.getElementById('mobile-menu');
+          if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+          }
+        });
+      });
+
+      // Scroll to order section
+      document.querySelectorAll('[data-scroll-order]').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          var target = document.getElementById('order-section');
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      // Mobile nav toggle
+      var navToggle = document.getElementById('nav-toggle');
+      var mobileMenu = document.getElementById('mobile-menu');
+      if (navToggle && mobileMenu) {
+        navToggle.addEventListener('click', function () {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+
+      // FAQ accordion
+      document.querySelectorAll('.faq-item button').forEach(function (button) {
+        button.addEventListener('click', function () {
+          var parent = button.closest('.faq-item');
+          parent.classList.toggle('active');
+        });
+      });
+
+      // Stock urgency
+      var stockEl = document.getElementById('stock-count');
+      var stock = Math.floor(Math.random() * 8) + 19; // 19-26
+      function renderStock() {
+        if (stockEl) stockEl.textContent = stock;
+      }
+      renderStock();
+      setInterval(function () {
+        if (stock > 6) {
+          stock--;
+          renderStock();
+        }
+      }, 28000);
+
+      // Offer countdown timer
+      var timerEl = document.getElementById('offer-timer');
+      var duration = 15 * 60;
+      function updateTimer() {
+        if (!timerEl) return;
+        var mins = Math.floor(duration / 60);
+        var secs = duration % 60;
+        timerEl.textContent =
+          (mins < 10 ? '0' + mins : mins) + ':' + (secs < 10 ? '0' + secs : secs);
+      }
+      updateTimer();
+      setInterval(function () {
+        duration--;
+        if (duration <= 0) duration = 15 * 60;
+        updateTimer();
+      }, 1000);
+
+      // Variant selection
+      document.querySelectorAll('.variant-pill').forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          var group = pill.getAttribute('data-group');
+          if (group) {
+            document
+              .querySelectorAll('.variant-pill[data-group="' + group + '"]')
+              .forEach(function (p) {
+                p.classList.remove('selected');
+              });
+          }
+          pill.classList.add('selected');
+          var value = pill.getAttribute('data-value');
+          var display = document.getElementById(group + '-value');
+          if (display && value) display.textContent = value;
+        });
+      });
+
+      // Pincode message
+      var pincodeInput = document.getElementById('pincode');
+      var pincodeMsg = document.getElementById('pincode-message');
+      if (pincodeInput && pincodeMsg) {
+        pincodeInput.addEventListener('blur', function () {
+          var pin = pincodeInput.value.trim();
+          if (pin.length === 6) {
+            pincodeMsg.textContent =
+              'Yes! We deliver to ' +
+              pin +
+              '. Estimated delivery in 4–7 working days via safe COD.';
+            pincodeMsg.classList.remove('hidden');
+          } else if (pin.length > 0) {
+            pincodeMsg.textContent = 'Please enter a valid 6-digit Indian PIN code.';
+            pincodeMsg.classList.remove('hidden');
+          } else {
+            pincodeMsg.classList.add('hidden');
+          }
+        });
+      }
+
+      // Form submit (demo)
+      var orderForm = document.getElementById('cod-order-form');
+      var formMessage = document.getElementById('form-message');
+      if (orderForm && formMessage) {
+        orderForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          formMessage.textContent =
+            'Thank you! Your COD order has been received. Our team will confirm it via call or WhatsApp shortly.';
+          formMessage.classList.remove('hidden');
+          orderForm.reset();
+        });
+      }
+
+      // WhatsApp buttons
+      var waButtons = document.querySelectorAll('[data-whatsapp]');
+      var waNumber = '919876543210'; // placeholder; replace with actual business number
+      waButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var nameField = document.getElementById('full-name');
+          var quantityField = document.getElementById('quantity');
+          var name = nameField ? nameField.value.trim() : '';
+          var quantity = quantityField ? quantityField.value : '1';
+          var msg =
+            'Hi ASHTAMI VERRA,%0A%0A' +
+            'I want to order the Wooden Magnetic Door Bell (Buy 1 Get 1 Free) on Cash on Delivery.%0A' +
+            'Quantity (sets of 2): ' +
+            quantity +
+            '%0A' +
+            'Name: ' +
+            (name || 'Not entered yet') +
+            '%0A%0A' +
+            'Please help me place my COD order.';
+          var url = 'https://wa.me/' + waNumber + '?text=' + msg;
+          window.open(url, '_blank');
+        });
+      });
+
+      // Footer year
+      var yearEl = document.getElementById('year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+</body>
+</html>
